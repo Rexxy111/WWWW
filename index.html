@@ -54,56 +54,55 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>💖 Pesan Spesial Dariku 💖</h1>
+    <div class="container" id="mainContainer">
+        
         <h2 id="question">Maukah kamu jadi pacarku? 🥺</h2>
+        
         <p id="message" style="margin-top:20px; font-size:1.2em; color: green;"></p>
 
         <div class="buttons">
-            <button onclick="handleYes()">Ya, aku mau!</button>
-            <button onclick="handleNo()">Maaf, tidak.</button>
+            <button id="yesButton" onclick="handleYes()">YA! 💖</button>
+            <button id="noButton" onclick="handleNo()">TIDAK 😔</button>
         </div>
-
-        <p id="message"></p>
     </div>
 
     <script>
-        // Ganti dengan tautan Google Form Anda yang sudah diisi sebelumnya
-        const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA;
-        const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
+        // PASTI SUDAH TERISI DENGAN TAUTAN ANDA
+        const TAUTAN_YA = "https://docs.google.com/forms/d/e/PASTIKAN_LINK_YA_DI_SINI";
+        const TAUTAN_TIDAK = "https://docs.google.com/forms/d/e/PASTIKAN_LINK_TIDAK_DI_SINI";
 
+        // PASTIKAN PENGAMBILAN ELEMEN HTML BENAR
         const messageElement = document.getElementById('message');
         const questionElement = document.getElementById('question');
+        // ... (Elemen lain jika diperlukan, seperti noButton jika Anda menggunakan fungsi moveNoButton)
 
-// Fungsi saat tombol "YA" diklik
-function handleYes() {
-    // 1. Tampilkan pesan sukses
-    messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
-    questionElement.style.display = 'none';
-    // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
-    setTimeout(() => {
-        window.location.href = TAUTAN_YA; // Arahkan ke Google Form untuk mencatat jawaban YA
-    }, 3000); 
-}
+        // FUNGSI HANDLE YA
+        function handleYes() {
+            messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
+            questionElement.style.display = 'none';
+            
+            // JEDA 3 DETIK
+            setTimeout(() => {
+                window.location.href = TAUTAN_YA; 
+            }, 3000); 
+        }
 
-// Fungsi saat tombol "TIDAK" diklik
-function handleNo() {
-    // 1. Tampilkan pesan "mengerti"
-    messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
-    questionElement.style.display = 'none';
+        // FUNGSI HANDLE TIDAK
+        function handleNo() {
+            messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+            questionElement.style.display = 'none';
 
-    // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
-    setTimeout(() => {
-        window.location.href = TAUTAN_TIDAK; // Arahkan ke Google Form untuk mencatat jawaban TIDAK
-    }, 3000);
-}
-
+            // JEDA 3 DETIK
+            setTimeout(() => {
+                window.location.href = TAUTAN_TIDAK;
+            }, 3000);
+        }
     </script>
-
 
 </body>
 
 </html>
+
 
 
 
