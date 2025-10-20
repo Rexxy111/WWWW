@@ -76,7 +76,7 @@ const messageElement = document.getElementById('message');
 // Fungsi saat tombol "YA" diklik
 function handleYes() {
     // 1. Tampilkan pesan sukses
-    messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
+    document.getElementById('message').innerHTML = "YAAY! Terima kasih sudah memberiku kesempatan! Aku sangat senang! 🎉";
     
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
@@ -87,7 +87,7 @@ function handleYes() {
 // Fungsi saat tombol "TIDAK" diklik
 function handleNo() {
     // 1. Tampilkan pesan "mengerti"
-    messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+     document.getElementById('message').innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
 
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
@@ -101,6 +101,7 @@ function handleNo() {
 </body>
 
 </html>
+
 
 
 
