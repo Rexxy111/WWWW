@@ -67,20 +67,40 @@
     </div>
 
     <script>
-        const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA ;
-        const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
-        
-        function handleYes() {
-            document.getElementById('message').innerHTML = "YAAY! Terima kasih sudah memberiku kesempatan! Aku sangat senang! 🎉";
-            window.location.href = TAUTAN_YA;
-            // Kamu bisa menambahkan logika lain di sini, misalnya redirect ke halaman lain
-        }
+        // Ganti dengan tautan Google Form Anda yang sudah diisi sebelumnya
+const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA;
+const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
 
-        function handleNo() {
-            document.getElementById('message').innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
-            window.location.href = TAUTAN_TIDAK;
-            // Kamu juga bisa membuat tombol 'Tidak' ini bergerak-gerak agar lebih lucu!
-        }
+const messageElement = document.getElementById('message');
+const questionElement = document.getElementById('question');
+
+// Fungsi saat tombol "YA" diklik
+function handleYes() {
+    // 1. Tampilkan pesan sukses
+    messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
+    
+    // Opsional: Sembunyikan pertanyaan utama
+    questionElement.style.display = 'none';
+    
+    // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
+    setTimeout(() => {
+        window.location.href = TAUTAN_YA; // Arahkan ke Google Form untuk mencatat jawaban YA
+    }, 3000); 
+}
+
+// Fungsi saat tombol "TIDAK" diklik
+function handleNo() {
+    // 1. Tampilkan pesan "mengerti"
+    messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+    
+    // Opsional: Sembunyikan pertanyaan utama
+    questionElement.style.display = 'none';
+
+    // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
+    setTimeout(() => {
+        window.location.href = TAUTAN_TIDAK; // Arahkan ke Google Form untuk mencatat jawaban TIDAK
+    }, 3000);
+}
 
     </script>
 
@@ -88,4 +108,5 @@
 </body>
 
 </html>
+
 
