@@ -76,7 +76,24 @@
             document.getElementById('message').innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
             // Kamu juga bisa membuat tombol 'Tidak' ini bergerak-gerak agar lebih lucu!
         }
+
+        // Ganti kedua tautan di bawah ini dengan tautan Google Form Anda!
+const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA ;
+const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
+
+// Fungsi saat tombol "YA" diklik
+function handleYes() {
+    // Arahkan ke Google Form untuk mencatat jawaban YA
+    window.location.href = TAUTAN_YA; 
+}
+
+// Fungsi saat tombol "TIDAK" diklik
+function handleNo() {
+    // Arahkan ke Google Form untuk mencatat jawaban TIDAK
+    window.location.href = TAUTAN_TIDAK;
+}
     </script>
 
 </body>
+
 </html>
