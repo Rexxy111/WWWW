@@ -56,7 +56,8 @@
 
     <div class="container">
         <h1>💖 Pesan Spesial Dariku 💖</h1>
-        <p>Hai [Marcella], selama ini aku menyimpan perasaan ini. Maukah kamu memberiku kesempatan untuk menjadi lebih dari sekadar teman? 😊</p>
+        <h2> id="question">Maukah kamu jadi pacarku? 🥺</h2>
+        <p id="message" style="margin-top:20px; font-size:1.2em; color: green;"></p>
 
         <div class="buttons">
             <button onclick="handleYes()">Ya, aku mau!</button>
@@ -68,14 +69,17 @@
 
     <script>
         // Ganti dengan tautan Google Form Anda yang sudah diisi sebelumnya
-const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA;
-const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
+        const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=YA;
+        const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
+
+        const messageElement = document.getElementById('message');
+        const questionElement = document.getElementById('question');
 
 // Fungsi saat tombol "YA" diklik
 function handleYes() {
     // 1. Tampilkan pesan sukses
-    document.getElementById('message').innerHTML = "YAAY! Terima kasih sudah memberiku kesempatan! Aku sangat senang! 🎉";
-    
+    messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
+    questionElement.style.display = 'none';
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
         window.location.href = TAUTAN_YA; // Arahkan ke Google Form untuk mencatat jawaban YA
@@ -85,7 +89,8 @@ function handleYes() {
 // Fungsi saat tombol "TIDAK" diklik
 function handleNo() {
     // 1. Tampilkan pesan "mengerti"
-     document.getElementById('message').innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+    messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+    questionElement.style.display = 'none';
 
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
@@ -99,6 +104,7 @@ function handleNo() {
 </body>
 
 </html>
+
 
 
 
