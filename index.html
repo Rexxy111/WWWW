@@ -72,15 +72,11 @@ const TAUTAN_YA = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwv
 const TAUTAN_TIDAK = https://docs.google.com/forms/d/e/1FAIpQLScqIOoPCiofHrKtMTmzwvr1VetaJ7qf4Agn5ej3ggBWz1lKhA/viewform?usp=pp_url&entry.383297685=TIDAK;
 
 const messageElement = document.getElementById('message');
-const questionElement = document.getElementById('question');
 
 // Fungsi saat tombol "YA" diklik
 function handleYes() {
     // 1. Tampilkan pesan sukses
     messageElement.innerHTML = "YEAYYY! Aku senang banget! Kamu buat hariku! 🎉😍";
-    
-    // Opsional: Sembunyikan pertanyaan utama
-    questionElement.style.display = 'none';
     
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
@@ -92,9 +88,6 @@ function handleYes() {
 function handleNo() {
     // 1. Tampilkan pesan "mengerti"
     messageElement.innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
-    
-    // Opsional: Sembunyikan pertanyaan utama
-    questionElement.style.display = 'none';
 
     // 2. Tunda pengalihan selama 3 detik (3000 milidetik)
     setTimeout(() => {
@@ -108,5 +101,6 @@ function handleNo() {
 </body>
 
 </html>
+
 
 
