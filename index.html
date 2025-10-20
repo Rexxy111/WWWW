@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Spesial Untukmu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        h1 {
+            color: #ff69b4; /* Pink */
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .buttons button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .buttons button:hover {
+            background-color: #e65a9a;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #4CAF50; /* Hijau */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💖 Pesan Spesial Dariku 💖</h1>
+        <p>Hai [Marcella], selama ini aku menyimpan perasaan ini. Maukah kamu memberiku kesempatan untuk menjadi lebih dari sekadar teman? 😊</p>
+
+        <div class="buttons">
+            <button onclick="handleYes()">Ya, aku mau!</button>
+            <button onclick="handleNo()">Maaf, tidak.</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function handleYes() {
+            document.getElementById('message').innerHTML = "YAAY! Terima kasih sudah memberiku kesempatan! Aku sangat senang! 🎉";
+            // Kamu bisa menambahkan logika lain di sini, misalnya redirect ke halaman lain
+        }
+
+        function handleNo() {
+            document.getElementById('message').innerHTML = "Aku mengerti. Terima kasih sudah jujur padaku. Semoga kita tetap bisa berteman baik. 🙂";
+            // Kamu juga bisa membuat tombol 'Tidak' ini bergerak-gerak agar lebih lucu!
+        }
+    </script>
+
+</body>
+</html>
